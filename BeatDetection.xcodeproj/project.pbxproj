@@ -14,6 +14,11 @@
 		C187EAA722B079BA00DA161D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C187EAA522B079BA00DA161D /* Main.storyboard */; };
 		C187EAB322B079BB00DA161D /* BeatDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C187EAB222B079BB00DA161D /* BeatDetectionTests.swift */; };
 		C187EABE22B079BB00DA161D /* BeatDetectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C187EABD22B079BB00DA161D /* BeatDetectionUITests.swift */; };
+		C187EACF22B07BE900DA161D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187EACE22B07BE900DA161D /* Accelerate.framework */; };
+		C187EAD122B07BF700DA161D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187EAD022B07BF700DA161D /* AudioToolbox.framework */; };
+		C187EAD522B07C2800DA161D /* aubio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187EACB22B07A2400DA161D /* aubio.framework */; };
+		C187EAD922B07C8200DA161D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187EAD822B07C8200DA161D /* CoreAudio.framework */; };
+		C187EADB22B0813700DA161D /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C187EADA22B0813700DA161D /* AudioEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,11 @@
 		C187EAB922B079BB00DA161D /* BeatDetectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeatDetectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C187EABD22B079BB00DA161D /* BeatDetectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatDetectionUITests.swift; sourceTree = "<group>"; };
 		C187EABF22B079BB00DA161D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C187EACB22B07A2400DA161D /* aubio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = aubio.framework; sourceTree = "<group>"; };
+		C187EACE22B07BE900DA161D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		C187EAD022B07BF700DA161D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C187EAD822B07C8200DA161D /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		C187EADA22B0813700DA161D /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C187EACF22B07BE900DA161D /* Accelerate.framework in Frameworks */,
+				C187EAD522B07C2800DA161D /* aubio.framework in Frameworks */,
+				C187EAD922B07C8200DA161D /* CoreAudio.framework in Frameworks */,
+				C187EAD122B07BF700DA161D /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +96,7 @@
 				C187EAB122B079BB00DA161D /* BeatDetectionTests */,
 				C187EABC22B079BB00DA161D /* BeatDetectionUITests */,
 				C187EA9A22B079B800DA161D /* Products */,
+				C187EACD22B07A2C00DA161D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +120,7 @@
 				C187EAA822B079BA00DA161D /* Info.plist */,
 				C187EAA922B079BA00DA161D /* BeatDetection.entitlements */,
 				C187EAA222B079BA00DA161D /* Preview Content */,
+				C187EADA22B0813700DA161D /* AudioEngine.swift */,
 			);
 			path = BeatDetection;
 			sourceTree = "<group>";
@@ -133,6 +149,17 @@
 				C187EABF22B079BB00DA161D /* Info.plist */,
 			);
 			path = BeatDetectionUITests;
+			sourceTree = "<group>";
+		};
+		C187EACD22B07A2C00DA161D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C187EAD822B07C8200DA161D /* CoreAudio.framework */,
+				C187EAD022B07BF700DA161D /* AudioToolbox.framework */,
+				C187EACE22B07BE900DA161D /* Accelerate.framework */,
+				C187EACB22B07A2400DA161D /* aubio.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C187EADB22B0813700DA161D /* AudioEngine.swift in Sources */,
 				C187EA9F22B079B800DA161D /* ContentView.swift in Sources */,
 				C187EA9D22B079B800DA161D /* AppDelegate.swift in Sources */,
 			);
@@ -436,6 +464,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "BeatDetection/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = BeatDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +489,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "BeatDetection/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = BeatDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

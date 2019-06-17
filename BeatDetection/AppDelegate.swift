@@ -14,7 +14,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var window: NSWindow!
 
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         window = NSWindow(
@@ -23,7 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered, defer: false)
         window.center()
         window.setFrameAutosaveName("Main Window")
-
+        let view = ContentView()
+        try! view.audioEngine.start()
         window.contentView = NSHostingView(rootView: ContentView())
 
         window.makeKeyAndOrderFront(nil)
